@@ -15,7 +15,6 @@ export const useProtectedResource = (url, defaultValue) => {
         return;
       }
 
-      console.log('here');
       const response = await fetch(url, {
         headers: {
           AuthToken: await user.getIdToken(),
